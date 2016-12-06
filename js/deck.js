@@ -4,44 +4,47 @@ export default class Deck {
     constructor() {
         this.names = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
 	    this.suits = ['Hearts','Diamonds','Spades','Clubs'];
-	    this.cards = [];
+	    this.deck = [];
     }
 
     createCards() {
         let i, j;
         for(i = 0; i < this.suits.length; i++ ) {
             for(j = 0; j < this.names.length; j++ ) {
-                this.cards.push( new Card( j+1, this.names[j], this.suits[i] ) );
+                this.deck.push( new Card( j+1, this.names[j], this.suits[i] ) );
             }
         }
-        return this.cards;
+        return this.deck;
     }
 
     shaffle() {
        let i, j, k, temp;
-       let n = this.cards.length;
+       let n = this.deck.length;
        for (i = 0; i < n; i++) {
            for (j = 0; j < n; j++) {
                k = Math.floor(Math.random() * n);
-               temp = this.cards[j];
-               this.cards[j] = this.cards[k];
-               this.cards[k] = temp;
+               temp = this.deck[j];
+               this.deck[j] = this.deck[k];
+               this.deck[k] = temp;
            }
        }
-       return this.cards;
+       return this.deck;
     }
 
     count() {
-        return this.cards.length;
+        if(this.deck.length) {
+            return this.deck.length;
+        } else
+            return null;
     }
 
     addCard() {
-        
+
     }
 
-    getCard() {
-        if (this.cards.length > 0) {
-            return this.cards.shift();
+    deal() {
+        if (this.deck.length > 0) {
+            return this.deck.shift();
         }
         else return null;
     }
