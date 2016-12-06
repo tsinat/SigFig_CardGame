@@ -1,5 +1,7 @@
 export default class Card {
-    constructor(){
-        
+    constructor(value, name, suit){
+        this.value = value;
+        this.name = name;
+        this.suit = suit;
     }
 }
