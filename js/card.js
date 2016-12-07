@@ -4,4 +4,8 @@ export default class Card {
         this.name = name;
         this.suit = suit;
     }
+    // method to graphically draw the card in the DOM
+    drawCard(card) {
+        
+    }
 }

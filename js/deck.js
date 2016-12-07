@@ -31,11 +31,8 @@ export default class Deck {
        return this.deck;
     }
 
-    count() {
-        if(this.deck.length) {
-            return this.deck.length;
-        } else
-            return null;
+    cardCount() {
+        return this.deck.length;
     }
 
     addCard() {
@@ -47,5 +44,11 @@ export default class Deck {
             return this.deck.shift();
         }
         else return null;
+    }
+    stackCombine(deck) {
+        return [
+            ...deck,
+            this.cards
+        ];
     }
 }

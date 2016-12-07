@@ -14,6 +14,6 @@ import Card from './card';
     console.log(myDeck.deal());
     console.log(myDeck.deal());
     console.log(myDeck.deal());
-    console.log(myDeck.count());
+    console.log(myDeck.cardCount());
 
 })();
