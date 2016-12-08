@@ -6,4 +6,4 @@
     git clone https://github.com/tsinat/SigFig_CardGame
     cd SigFig_CardGame
     npm install
-    npm start
+    npm run dev
