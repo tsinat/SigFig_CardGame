@@ -34,8 +34,8 @@ import Player from './player';
     //it will accept a player and add on card to his/her hand
     const play = (player) => {
         player.cards.push(myDeck.deal());
-        checkGame(player1.cards.value, value2.cards.value);
+        checkGame(player1.cards.value, player2.cards.value);
     }
 
-    checkGame(player1.cards.value, value2.cards.value);
+    checkGame(player1.cards.value, player2.cards.value);
 })();
